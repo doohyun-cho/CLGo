@@ -1,3 +1,5 @@
 Apollo_Sim_3D_Lane_Release/
 **/results/**
+**cache**
 *.pyc
+/.vscode/

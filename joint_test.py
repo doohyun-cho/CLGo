@@ -18,6 +18,8 @@ from config import system_configs
 from nnet.joint_py_factory import NetworkFactory
 from db.datasets import datasets
 from db.utils.evaluator import Evaluator
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="torch.nn.functional")
 
 torch.backends.cudnn.benchmark = False
 

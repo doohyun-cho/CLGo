@@ -23,7 +23,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 plt.rcParams['figure.figsize'] = (35, 30)
-
+np.warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning)
 
 def define_args():
     parser = argparse.ArgumentParser(description='Lane_detection_all_objectives')

@@ -160,11 +160,12 @@ def kp_detection(db, nnet, result_dir, debug=False, evaluator=None, attn_map=Fal
             # pred_plt = db.draw_3dannotation(ind, pred=None, cls_pred=None, img=(img_canvas, ipm_laneline))
             pred_plt = db.draw_3dannotation(ind, pred=results[0].cpu().numpy(), cls_pred=None,
                                             img=(img_canvas, ipm_laneline))
-            pred_plt.savefig(os.path.join(lane_debug_dir, img_lst[-3] + '_' + img_lst[-2] + '_'
+            pred_plt.savefig(os.path.join(lane_debug_dir, img_lst[-2] + '_'
                                           + os.path.basename(image_file[:-4]) + '_3D.jpg'))
             pred_plt.close()
             # exit()
-
+    
+    eval_stat = None
     if not debug:
         exp_name = 'apollosim'
         evaluator.exp_name = exp_name
